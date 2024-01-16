@@ -1,117 +1,170 @@
-import 'package:dentsulms/Signup.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'DentsULMS',
-      theme: ThemeData(
-          // Your theme configuration
-          ),
-      home: const MyHomePage(title: 'DentSULMS'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(title),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              'Welcome to Dentsu LMS',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 8),
-            const Text(
-              'A tool that leverages the power of data and artificial intelligence to drive digital transformation at scale',
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.grey,
-              ),
-            ),
-            const SizedBox(height: 16),
-            const Text(
-              'Username',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const TextField(
-              decoration: InputDecoration(
-                hintText: 'Enter your email or username',
-              ),
-            ),
-            const SizedBox(height: 16),
-            const Text(
-              'Password',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                hintText: 'Enter your password',
-              ),
-            ),
-            const SizedBox(height: 8),
-            Row(
+      home: Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: Column(
               children: [
-                Checkbox(
-                  value: false, // You can manage the state accordingly
-                  onChanged: (value) {
-                    // Handle checkbox state
-                  },
+                Container(
+                  width: 79,
+                  height: 20,
+                  margin: const EdgeInsets.only(top: 246),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF3F4347),
+                  ),
+                  child: const Text(
+                    'Username',
+                    style: TextStyle(
+                      fontFamily: 'DM Sans',
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
-                const Text('Keep me logged in'),
+                const SizedBox(height: 8),
+                Container(
+                  width: double.infinity,
+                  constraints: const BoxConstraints(maxWidth: 604),
+                  height: 57,
+                  padding: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.only(left: 171),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Enter your email or username',
+                      hintStyle: TextStyle(
+                        fontFamily: 'DM Sans',
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                        color: const Color(0xFF3F4347),
+                      ),
+                      border: InputBorder.none,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Container(
+                  width: double.infinity,
+                  height: 20,
+                  margin: const EdgeInsets.only(left: 171),
+                  color: const Color(0xFF000000),
+                  child: const Text(
+                    'Password:',
+                    style: TextStyle(
+                      fontFamily: 'DM Sans',
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Container(
+                  width: double.infinity,
+                  constraints: const BoxConstraints(maxWidth: 604),
+                  height: 57,
+                  padding: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.only(top: 10, left: 171),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      hintText: 'Enter your password',
+                      hintStyle: TextStyle(
+                        fontFamily: 'DM Sans',
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                        color: const Color(0xFF3F4347),
+                      ),
+                      border: InputBorder.none,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Row(
+                  children: [
+                    Checkbox(
+                      value: true, // Checked for "Keep me logged in"
+                      onChanged: (value) {
+                        // Handle checkbox state
+                      },
+                    ),
+                    const Text('Keep me logged in'),
+                    const Spacer(),
+                    GestureDetector(
+                      onTap: () {
+                        // Handle forgot password action
+                      },
+                      child: Container(
+                        color: const Color(0xFFA1519A),
+                        padding: const EdgeInsets.all(10),
+                        child: const Text(
+                          'Forgot password?',
+                          style: TextStyle(
+                            fontFamily: 'DM Sans',
+                            fontSize: 16,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 16),
+                Container(
+                  width: 604,
+                  height: 51,
+                  padding: const EdgeInsets.fromLTRB(15, 15, 274, 15),
+                  margin: const EdgeInsets.only(top: 712, left: 171),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF4A2760),
+                    borderRadius: BorderRadius.circular(90),
+                  ),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      // Handle login action
+                    },
+                    style: ElevatedButton.styleFrom(
+                      primary: const Color(
+                          0xFF4A2760), // the background color of the button
+                      fixedSize:
+                          const Size(604, 51), // the fixed size of the button
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(
+                            90), // the rounded corners of the button
+                      ),
+                    ),
+                    child: const Text(
+                      'Log In',
+                      style: TextStyle(
+                        fontFamily: 'DM Sans',
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
-            const SizedBox(height: 8),
-            GestureDetector(
-              onTap: () {
-                // Handle forgot password action
-              },
-              child: const Text(
-                'Forgot password?',
-                style: TextStyle(
-                  color: Colors.blue,
-                ),
-              ),
-            ),
-            const SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: () {
-                // Handle login action
-              },
-              child: const Text('Log In'),
-            ),
-          ],
+          ),
         ),
+        backgroundColor: Colors.white, // Set background color to white
       ),
     );
   }
