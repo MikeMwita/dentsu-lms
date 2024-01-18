@@ -80,7 +80,8 @@ class DesktopLoginView extends StatelessWidget {
                                     width: 540.0,
                                     child: TextFormField(
                                       decoration: const InputDecoration(
-                                        hintText: 'Enter your email or Username',
+                                        hintText:
+                                            'Enter your email or Username',
                                       ),
                                     ),
                                   ),
