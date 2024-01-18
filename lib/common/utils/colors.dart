@@ -1,0 +1,37 @@
+import 'package:flutter/material.dart';
+
+const backgroundColor = Color.fromRGBO(242, 242, 242, 1);
+const textColor = Color.fromRGBO(241, 241, 242, 1);
+const appBarColor = Color.fromRGBO(74, 39, 96, 1);
+const primaryColor = Color.fromRGBO(74, 40, 96, 1);
+const secondaryColor = Color.fromRGBO(161, 81, 154, 1);
+const greenColor = Color.fromRGBO(52, 181, 58, 1);
+const redColor = Color.fromRGBO(255, 58, 41, 1);
+const tintGreenColor = Color.fromRGBO(89, 191, 163, 1.0);
+const blueColor = Color.fromRGBO(67, 57, 242, 1.0);
+const lightBlueColor = Color.fromRGBO(218, 215, 254, 1.0);
+const yellowColor = Color.fromRGBO(255, 215, 0, 1.0);
+const greyColor = Color.fromRGBO(158, 160, 163, 1);
+const darkGreyColor = Color(0xff231F20);
+const borderGreyColor = Color.fromRGBO(158, 160, 163, 1);
+const chartBehind = Color.fromRGBO(255, 229, 211, 1);
+const chartActive = Color.fromRGBO(134, 58, 172, 1);
+const colorCreditChart = Color.fromRGBO(56, 126, 161, 1);
+const colorInsuranceChart = Color.fromRGBO(90, 190, 166, 1);
+const colorAccountChart = Color.fromRGBO(134, 58, 172, 1);
+const colorDataTable = Color.fromRGBO(250, 248, 248, 1);
+const colorSentEmails = Color.fromRGBO(255, 223, 221, 1.0);
+const colorDeliveredEmails = Color.fromRGBO(207, 176, 222, 1.0);
+const buttonTopColor = Color.fromRGBO(134, 58, 172, 1);
+const cardBorder = Color.fromRGBO(102, 102, 102, 1);
+const formBorderColor = Color.fromRGBO(223, 222, 222, 1);
+
+const kAnimationDuration = Duration(milliseconds: 200);
+Color lightgreenshede = Color(0xFFF0FAF6);
+Color lightgreenshede1 = Color(0xFFB2D9CC);
+Color greenshede0 = Color(0xFF66A690);
+Color greenshede1 = Color(0xFF93C9B5);
+Color primarygreen = Color(0xFF1E3A34);
+Color grayshade = Color(0xFF93B3AA);
+Color colorAcent = Color(0xFF78C2A7);
+Color cyanColor = Color(0xFF6D7E6E);
