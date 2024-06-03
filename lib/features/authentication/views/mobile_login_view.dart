@@ -1,10 +1,11 @@
 import 'package:dentsulms/common/utils/utils.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class MobileLoginView extends ConsumerStatefulWidget {
-  condt MobileLoginView({Key? key}) : super(key: key);
+  const MobileLoginView({Key? key}) : super(key: key);
 
-  @override 
+  @override
   ConsumerState<MobileLoginView> createState() => _MobileLoginViewState();
 }
 
@@ -12,30 +13,31 @@ class _MobileLoginViewState extends ConsumerState<MobileLoginView> {
   bool isChecked = false;
   var _isSending = false;
 
-  final TextEditingController _emailController = TextEditingController(text:"charlesk@dentsu.com");
+  final TextEditingController _emailController =
+      TextEditingController(text: "charlesk@dentsu.com");
 
-  final  TextEditingController _passwordController = TextEditingController(text:"1234556");
+  final TextEditingController _passwordController =
+      TextEditingController(text: "1234556");
 
-
-  void signInWithEmail(){
+  void signInWithEmail() {
     String email = _emailController.text.trim();
     String password = _passwordController.text.trim();
-    if (email.isNotEmpty && password.isNotEmpty){
-      setState((){
+    if (email.isNotEmpty && password.isNotEmpty) {
+      setState(() {
         _isSending = true;
       });
-      ref 
+      ref
           .read(authControllerProvider)
-          .signInWithEmail(context,email,password);
-      } else {
-        setState((){
-          _isSending = false;
-        });
-        showSnackBar(context: context, content: 'Please fill in all fields');
-        }
-      }
+          .signInWithEmail(context, email, password);
+    } else {
+      setState(() {
+        _isSending = false;
+      });
+      showSnackBar(context: context, content: 'Please fill in all fields');
+    }
+  }
 
-       @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Scaffold(
