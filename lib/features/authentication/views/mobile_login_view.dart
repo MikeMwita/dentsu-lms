@@ -1,6 +1,11 @@
-import 'package:dentsulms/common/utils/utils.dart';
+import 'package:dentsu_app/common/helpers/spacing.dart';
+import 'package:dentsu_app/common/utils/colors.dart';
+import 'package:dentsu_app/common/utils/utils.dart';
+import 'package:dentsu_app/features/auth/controller/auth_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 
 class MobileLoginView extends ConsumerStatefulWidget {
   const MobileLoginView({Key? key}) : super(key: key);
@@ -14,10 +19,10 @@ class _MobileLoginViewState extends ConsumerState<MobileLoginView> {
   var _isSending = false;
 
   final TextEditingController _emailController =
-      TextEditingController(text: "charlesk@dentsu.com");
+      TextEditingController(text: 'charlesk@dentsu.com');
 
   final TextEditingController _passwordController =
-      TextEditingController(text: "1234556");
+      TextEditingController(text: '12345678');
 
   void signInWithEmail() {
     String email = _emailController.text.trim();
@@ -33,7 +38,7 @@ class _MobileLoginViewState extends ConsumerState<MobileLoginView> {
       setState(() {
         _isSending = false;
       });
-      showSnackBar(context: context, content: 'Please fill in all fields');
+      showSnackBar(context: context, content: 'Fill out all the fields');
     }
   }
 
