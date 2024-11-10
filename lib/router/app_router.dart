@@ -1,24 +1,24 @@
-import 'package:dentsu_app/features/auth/layouts/login_layout.dart';
-import 'package:dentsu_app/features/dashboard/components/lead_data_table_mobile.dart';
-import 'package:dentsu_app/features/dashboard/layouts/dashboard_layout.dart';
-import 'package:dentsu_app/features/dashboard/views/mobile/leads_details.dart';
-import 'package:dentsu_app/features/dashboard/views/mobile/profile.dart';
-import 'package:dentsu_app/features/dashboard/views/mobile/quote.dart';
-import 'package:dentsu_app/features/dashboard/views/mobile/quote_details.dart';
-import 'package:dentsu_app/features/dashboard/views/mobile_dashboard_screen.dart';
-import 'package:dentsu_app/features/dashboard/views/mobile/leads.dart';
+import 'package:dentsulms/features/authentication/layouts/login_layout.dart';
+import 'package:dentsulms/features/dashboard/components/lead_data_table_mobile.dart';
+import 'package:dentsulms/features/dashboard/layout/dashboard_layout.dart';
+import 'package:dentsulms/features/dashboard/views/dashboard_mainarea_view.dart';
+import 'package:dentsulms/features/dashboard/views/desktop_dashboard_screen.dart';
+import 'package:dentsulms/features/dashboard/views/desktop_lead_view.dart';
+import 'package:dentsulms/features/dashboard/views/desktop_leads_view.dart';
+import 'package:dentsulms/features/dashboard/views/mobile/leads_details.dart';
+import 'package:dentsulms/features/dashboard/views/mobile/profile.dart';
+import 'package:dentsulms/features/dashboard/views/mobile/quote.dart';
+import 'package:dentsulms/features/dashboard/views/mobile/quote_details.dart';
+import 'package:dentsulms/features/dashboard/views/mobile_dashboard_screen.dart';
+import 'package:dentsulms/features/dashboard/views/mobile/leads.dart';
 import 'package:dentsulms/features/dashboard/views/mobile_home.dart';
 import 'package:flutter/material.dart';
-import 'package:dentsu_app/features/dashboard/views/dashboard_mainarea_view.dart';
-import 'package:dentsu_app/features/dashboard/views/desktop_dashboard_screen.dart';
-import 'package:dentsu_app/features/dashboard/views/desktop_lead_view.dart';
-import 'package:dentsu_app/features/dashboard/views/desktop_leads_view.dart';
-import 'package:dentsu_app/features/dashboard/views/mobile/leads.dart';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../models/lead.dart';
+import '../models/leads.dart';
 
 final rootNavigatorKey = GlobalKey<NavigatorState>();
 

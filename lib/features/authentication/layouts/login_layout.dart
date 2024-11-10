@@ -1,6 +1,6 @@
-import 'package:dentsu_app/common/utils/breakpoints.dart';
-import 'package:dentsu_app/features/auth/views/desktop_login_view.dart';
-import 'package:dentsu_app/features/auth/views/mobile_login_view.dart';
+import 'package:dentsulms/common/utils/breakpoints.dart';
+import 'package:dentsulms/features/authentication/views/desktop_login_view.dart';
+import 'package:dentsulms/features/authentication/views/mobile_login_view.dart';
 import 'package:flutter/material.dart';
 
 class LoginLayout extends StatelessWidget {
